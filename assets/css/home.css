@@ -1,0 +1,42 @@
+:root{
+    --bg-color:#FFF5E1;
+    --accent: #FFC0CB;
+    --accent-secondary: #8B4513;
+    --text: #5D4037;
+    --text-secondary:#B0BEC5;
+
+    --headings: 'Pacifico';
+    --paragraphs: 'Lato';
+}
+
+body{
+    max-width: 100vw;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 16px;
+    background-color: var(--bg-color);
+    nav{
+        display: flex;
+        gap: 12px;
+        padding: 16px 0;
+        .navList{
+            display: flex;
+            gap: 16px;
+            .navLink{
+                padding: 12px 0;
+            }
+        }
+    }
+    .login{
+        display: flex;
+        gap: 16px;
+        padding: 6px 0;
+    }
+}
+
+

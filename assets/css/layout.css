@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Pacifico';
+    src: url(../../public/fonts/Pacifico/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url(../../public/fonts/Lato/Lato-Regular.ttf);
+}
+
+:root{
+    --bg-color:#FFF5E1;
+    --accent: #FFC0CB;
+    --accent-secondary: #8B4513;
+    --text: #5D4037;
+    --text-secondary:#B0BEC5;
+
+    --headings: 'Pacifico';
+    --paragraphs: 'Lato';
+}
+
+body{
+    h1,h2,h3,h4,h5,h6{
+        font-family: var(--headings);
+        color: var(--text);
+    }
+
+    p,li,a{
+        font-family: var(--paragraphs);
+        color: var(--text);
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
