@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras - Pastelería Mil Sabores</title>
     <link rel="stylesheet" href="../assets/css/layout.css">
+    <script src="../assets/js/carrito.js" defer></script>
 </head>
 <body>
     <header>
@@ -49,11 +50,11 @@
             </form>
         </section>
 
-        <section>
+        <section class="resumen-carrito">
             <h2>Resumen de Compra</h2>
-            <p>Subtotal: $45.000 CLP</p>
-            <p>Descuento aplicado: $0 CLP</p>
-            <p><strong>Total: $45.000 CLP</strong></p>
+            <p>Subtotal: <span id="resumen-subtotal">$0 CLP</span></p>
+            <p>Descuento aplicado: <span id="resumen-descuento">$0 CLP</span></p>
+            <p><strong>Total: <span id="resumen-total">$0 CLP</span></strong></p>
         </section>
 
         <section>
