@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto - Pastelería Mil Sabores</title>
+    <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body>
+    <header>
+        <nav><a href="./productos.html">&larr; Volver al catálogo</a></nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>Torta Especial de Cumpleaños</h1>
+            <p><strong>Código:</strong> TE001</p>
+            <p><strong>Precio:</strong> $55.000 CLP</p>
+            <p><strong>Descripción:</strong> Diseñada especialmente para celebraciones, personalizable con decoraciones y mensajes únicos.</p>
+            
+            <section>
+                <h3>Historia y Origen de la Receta</h3>
+                <p>Nuestra receta familiar con más de 50 años de tradición, horneada diariamente con ingredientes locales.</p>
+            </section>
+
+            <form>
+                <h3>Personaliza tu pedido</h3>
+                <div>
+                    <label for="mensaje-torta">Mensaje en la torta (opcional):</label>
+                    <input type="text" id="mensaje-torta" placeholder="¡Feliz Día Mamá!">
+                </div>
+                <div>
+                    <label for="tamano-opcion">Seleccionar tamaño:</label>
+                    <select id="tamano-opcion">
+                        <option value="15">15 personas</option>
+                        <option value="25">25 personas</option>
+                        <option value="40">40 personas</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" value="1" min="1">
+                </div>
+                <button type="button">Agregar al Carrito</button>
+            </form>
+
+            <section>
+                <p>Compartir este producto:</p>
+                <a href="#">Compartir en WhatsApp</a> | 
+                <a href="#">Compartir en Facebook</a>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pastelería Mil Sabores.</p>
+    </footer>
+</body>
+</html>

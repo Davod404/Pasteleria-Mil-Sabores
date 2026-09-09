@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Pastelería Mil Sabores</title>
+    <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body>
+    <header>
+        <h1>Tu Carrito de Compras</h1>
+        <nav><a href="./productos.html">Seguir comprando</a></nav>
+    </header>
+
+    <main>
+        <section>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Detalles / Personalización</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-carrito">
+                    <tr>
+                        <td>Torta Cuadrada de Chocolate</td>
+                        <td>Mensaje: "Feliz Cumpleaños Pedro"</td>
+                        <td>$45.000 CLP</td>
+                        <td>
+                            <input type="number" value="1" min="1">
+                        </td>
+                        <td>$45.000 CLP</td>
+                        <td><button type="button">Eliminar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Descuentos y Promociones</h2>
+            <form>
+                <label for="cupon">Código de Descuento:</label>
+                <input type="text" id="cupon" placeholder="FELICES50">
+                <button type="button">Aplicar Cupón</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Resumen de Compra</h2>
+            <p>Subtotal: $45.000 CLP</p>
+            <p>Descuento aplicado: $0 CLP</p>
+            <p><strong>Total: $45.000 CLP</strong></p>
+        </section>
+
+        <section>
+            <h2>Datos de Envío y Despacho</h2>
+            <form>
+                <div>
+                    <label for="direccion-envio">Dirección de entrega:</label>
+                    <input type="text" id="direccion-envio">
+                </div>
+                <div>
+                    <label for="fecha-entrega">Fecha de entrega preferida:</label>
+                    <input type="date" id="fecha-entrega">
+                </div>
+                <button type="submit">Confirmar Pedido y Generar Boleta</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pastelería Mil Sabores.</p>
+    </footer>
+</body>
+</html>

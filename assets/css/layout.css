@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. FUENTES Y VARIABLES GLOBALES
+   ========================================================================== */
 @font-face {
     font-family: 'Pacifico';
     src: url(../../public/fonts/Pacifico/Pacifico-Regular.ttf);
@@ -8,37 +11,289 @@
     src: url(../../public/fonts/Lato/Lato-Regular.ttf);
 }
 
-:root{
-    --bg-color:#FFF5E1;
-    --accent: #FFC0CB;
-    --accent-secondary: #8B4513;
-    --text: #5D4037;
-    --text-secondary:#B0BEC5;
+:root {
+    /* Paleta oficial del caso */
+    --bg-color: #FFF5E1;          /* Crema Pastel */
+    --accent: #FFC0CB;            /* Rosa Suave */
+    --accent-secondary: #8B4513;  /* Chocolate */
+    --text: #5D4037;              /* Marrón Oscuro */
+    --text-secondary: #B0BEC5;    /* Gris Claro */
 
-    --headings: 'Pacifico';
-    --paragraphs: 'Lato';
+    /* Variables funcionales y neutras */
+    --surface: #FFFFFF;
+    --border-color: #E2D3B8;
+    --danger: #D32F2F;
+
+    /* Tipografías */
+    --headings: 'Pacifico', cursive;
+    --paragraphs: 'Lato', sans-serif;
+
+    /* Tamaños de fuente */
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.75rem;
+    --font-size-2xl: 2.25rem;
+    --font-size-hero: 3rem;
+
+    /* Espaciados y bordes */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
 }
 
-body{
-    h1,h2,h3,h4,h5,h6{
-        font-family: var(--headings);
-        color: var(--text);
-    }
-
-    p,li,a{
-        font-family: var(--paragraphs);
-        color: var(--text);
-    }
-    ul{
-        margin: 0;
-        padding: 0;
-    }
+/* ==========================================================================
+   2. RESET Y ESTILOS BASE
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-a{
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: var(--paragraphs);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tipografía y Encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headings);
+    color: var(--accent-secondary);
+    letter-spacing: 0.5px;
+    font-weight: normal;
+    line-height: 1.3;
+}
+
+h1 { font-size: var(--font-size-2xl); }
+h2 { font-size: var(--font-size-xl); margin-bottom: var(--spacing-md); }
+h3 { font-size: var(--font-size-lg); }
+
+p {
+    margin-bottom: var(--spacing-md);
+}
+
+small, .text-secondary {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+a {
+    color: var(--accent-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   3. ESTRUCTURA Y LAYOUT GENERAL
+   ========================================================================== */
+header {
+    background-color: var(--surface);
+    border-bottom: 2px solid var(--border-color);
+    padding: var(--spacing-md) var(--spacing-xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+header h1 {
+    font-size: var(--font-size-2xl);
+    color: var(--accent-secondary);
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+header nav a {
+    font-weight: bold;
+    font-size: var(--font-size-base);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+}
+
+header nav a:hover {
+    background-color: var(--accent);
+    color: var(--accent-secondary);
     text-decoration: none;
 }
 
-li{
-    list-style: none;
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+footer {
+    background-color: var(--accent-secondary);
+    color: var(--bg-color);
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-md);
+    margin-top: auto;
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: var(--font-size-sm);
+}
+
+/* ==========================================================================
+   4. COMPONENTES: BOTONES
+   ========================================================================== */
+button, 
+input[type="submit"], 
+input[type="button"], 
+.btn {
+    display: inline-block;
+    background-color: var(--accent-secondary);
+    color: #FFFFFF;
+    font-family: var(--paragraphs);
+    font-size: var(--font-size-base);
+    font-weight: bold;
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover, 
+input[type="submit"]:hover, 
+.btn:hover {
+    background-color: #6d350d;
+    text-decoration: none;
+}
+
+button:active, 
+input[type="submit"]:active, 
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Botón secundario (usando Rosa Suave de acento) */
+button.btn-accent,
+.btn-accent {
+    background-color: var(--accent);
+    color: var(--accent-secondary);
+}
+
+button.btn-accent:hover,
+.btn-accent:hover {
+    background-color: #ffadb9;
+}
+
+/* ==========================================================================
+   5. COMPONENTES: FORMULARIOS
+   ========================================================================== */
+form {
+    background-color: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg) auto;
+}
+
+form > div {
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-family: var(--paragraphs);
+    font-size: var(--font-size-base);
+    color: var(--text);
+    background-color: #FFFFFF;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, 
+select:focus, 
+textarea:focus {
+    border-color: var(--accent-secondary);
+    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.15);
+}
+
+/* ==========================================================================
+   6. COMPONENTES: TARJETAS (Artículos / Productos)
+   ========================================================================== */
+article {
+    background-color: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 2px 4px rgba(93, 64, 55, 0.05);
+}
+
+/* ==========================================================================
+   7. COMPONENTES: TABLAS (Carrito y Panel Admin)
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--surface);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: var(--spacing-lg);
+}
+
+th, td {
+    padding: var(--spacing-md);
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--accent-secondary);
+    color: #FFFFFF;
+    font-family: var(--paragraphs);
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 245, 225, 0.5); /* Sutil tinte del fondo */
 }

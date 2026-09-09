@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario - Pastelería Mil Sabores</title>
+    <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body>
+    <header>
+        <h1>Crea tu Cuenta</h1>
+        <nav><a href="../index.html">Inicio</a></nav>
+    </header>
+
+    <main>
+        <form>
+            <div>
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre">
+            </div>
+
+            <div>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" placeholder="ejemplo@duocuc.cl">
+                <small>Estudiantes de Duoc UC obtienen una torta gratis para su cumpleaños al usar su correo institucional.</small>
+            </div>
+
+            <div>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password">
+            </div>
+
+            <div>
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha-nacimiento">
+                <small>Clientes de 50 años o más tienen un 50% de descuento en sus compras.</small>
+            </div>
+
+            <div>
+                <label for="codigo-registro">Código promocional (Opcional):</label>
+                <input type="text" id="codigo-registro" placeholder="Ingresa FELICES50">
+            </div>
+
+            <button type="submit">Registrarse</button>
+        </form>
+        <p>¿Ya tienes una cuenta? <a href="./login.html">Inicia sesión aquí</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pastelería Mil Sabores.</p>
+    </footer>
+</body>
+</html>

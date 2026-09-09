@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos - Pastelería Mil Sabores</title>
+    <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Productos</h1>
+        <nav>
+            <a href="../index.html">Inicio</a> | 
+            <a href="./carrito.html">Carrito</a>
+        </nav>
+    </header>
+
+    <main>
+        <aside>
+            <h2>Filtros y Búsqueda</h2>
+            <form>
+                <div>
+                    <label for="buscar">Buscar producto:</label>
+                    <input type="text" id="buscar" placeholder="Ej. Chocolate, Brownie...">
+                </div>
+                <div>
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria">
+                        <option value="">Todas</option>
+                        <option value="cuadradas">Tortas Cuadradas</option>
+                        <option value="circulares">Tortas Circulares</option>
+                        <option value="postres">Postres Individuales</option>
+                        <option value="sin-azucar">Productos Sin Azúcar</option>
+                        <option value="tradicional">Pastelería Tradicional</option>
+                        <option value="sin-gluten">Productos Sin Gluten</option>
+                        <option value="vegana">Productos Vegana</option>
+                        <option value="especiales">Tortas Especiales</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="forma">Forma de la torta:</label>
+                    <select id="forma">
+                        <option value="">Cualquiera</option>
+                        <option value="cuadrada">Cuadrada</option>
+                        <option value="circular">Circular</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="tamano">Tamaño / Porciones:</label>
+                    <select id="tamano">
+                        <option value="">Cualquiera</option>
+                        <option value="pequeno">Individual / 10 personas</option>
+                        <option value="mediano">20 personas</option>
+                        <option value="grande">30+ personas</option>
+                    </select>
+                </div>
+                <button type="button">Aplicar Filtros</button>
+            </form>
+        </aside>
+
+        <section id="lista-productos">
+            <h2>Productos Disponibles</h2>
+            <div id="contenedor-productos">
+                <article>
+                    <h3>Torta Cuadrada de Chocolate</h3>
+                    <p>Categoría: Tortas Cuadradas</p>
+                    <p>Precio: $45.000 CLP</p>
+                    <a href="detalle-producto.html">Ver Detalles</a>
+                    <button type="button">Añadir al Carrito</button>
+                </article>
+                <article>
+                    <h3>Tiramisú Clásico</h3>
+                    <p>Categoría: Postres Individuales</p>
+                    <p>Precio: $5.500 CLP</p>
+                    <a href="detalle-producto.html">Ver Detalles</a>
+                    <button type="button">Añadir al Carrito</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pastelería Mil Sabores.</p>
+    </footer>
+</body>
+</html>

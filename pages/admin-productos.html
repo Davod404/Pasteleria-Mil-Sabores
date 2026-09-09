@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración - Gestión de Productos</title>
+    <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Administración: Productos</h1>
+        <nav>
+            <a href="../index.html">Ver Tienda</a> | 
+            <a href="./admin-usuarios.html">Gestión de Usuarios</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Agregar / Editar Producto</h2>
+            <form>
+                <div>
+                    <label for="prod-codigo">Código del Producto:</label>
+                    <input type="text" id="prod-codigo" placeholder="Ej: TC001">
+                </div>
+                <div>
+                    <label for="prod-nombre">Nombre:</label>
+                    <input type="text" id="prod-nombre">
+                </div>
+                <div>
+                    <label for="prod-categoria">Categoría:</label>
+                    <select id="prod-categoria">
+                        <option value="Tortas Cuadradas">Tortas Cuadradas</option>
+                        <option value="Tortas Circulares">Tortas Circulares</option>
+                        <option value="Postres Individuales">Postres Individuales</option>
+                        <option value="Productos Sin Azúcar">Productos Sin Azúcar</option>
+                        <option value="Pastelería Tradicional">Pastelería Tradicional</option>
+                        <option value="Productos sin gluten">Productos sin gluten</option>
+                        <option value="Productos Vegana">Productos Vegana</option>
+                        <option value="Tortas Especiales">Tortas Especiales</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="prod-precio">Precio (CLP):</label>
+                    <input type="number" id="prod-precio">
+                </div>
+                <div>
+                    <label for="prod-descripcion">Descripción:</label>
+                    <textarea id="prod-descripcion" rows="3"></textarea>
+                </div>
+                <button type="submit">Guardar Producto</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Listado Actual de Productos</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TC001</td>
+                        <td>Torta Cuadrada de Chocolate</td>
+                        <td>Tortas Cuadradas</td>
+                        <td>$45.000 CLP</td>
+                        <td>
+                            <button type="button">Editar</button>
+                            <button type="button">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Panel Administrativo - Pastelería Mil Sabores</p>
+    </footer>
+</body>
+</html>

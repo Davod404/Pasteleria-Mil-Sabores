@@ -1,154 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasteleria Mil Sabores</title>
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/home.css">
+    <title>Pastelería Mil Sabores - Inicio</title>
+    <link rel="stylesheet" href="./assets/css/layout.css">
 </head>
 <body>
     <header>
-        <div class="headerIcon">
-            <img src="./public/img/placeholder.png" alt="pasteleria-1000-sabores">
-        </div>
+        <h1>Pastelería Mil Sabores</h1>
+        <p>50 Años endulzando momentos</p>
         <nav>
-            <ul class="navList">
-                <li><a class="navLink" href="index.html">Inicio</a></li>
-                <li><a class="navLink" href="productos.html">Productos</a></li>
-                <li><a class="navLink" href="nosotros.html">Nosotros</a></li>
-                <li><a class="navLink" href="blog.html">Blog</a></li>
-                <li><a class="navLink" href="contacto.html">Contacto</a></li>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./pages/productos.html">Productos</a></li>
+                <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                <li><a href="./pages/blog.html">Blog</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+                <li><a href="./pages/carrito.html">Carrito</a></li>
+                <li><a href="./pages/login.html">Iniciar Sesión</a></li>
+                <li><a href="./pages/registro.html">Registro</a></li>
+                <li><a href="./pages/admin-productos.html">Admin Productos</a></li>
+                <li><a href="./pages/admin-usuarios.html">Admin Usuarios</a></li>
             </ul>
-
         </nav>
-        <ul class="login">
-            <li>
-                <a class="navLink" href="carrito.html">
-                    <img src="./public/img/placeholder.png" alt="cart"> 
-                    Carrito 
-                    (<span id="contador-carrito">0</span>)
-                </a>
-            </li>
-            <li>
-                <a class="navLink" href="login.html">
-                    <img src="./public/img/placeholder.png" alt="user"> 
-                    Iniciar Sesión
-                </a>
-            </li>
-            <li>
-                <a class="navLink" href="registro.html">
-                    <img src="./public/img/placeholder.png" alt="user"> 
-                    Registrarse
-                </a>
-            </li>
-        </ul>
     </header>
+
     <main>
-        <section class="titleContainer">
-            <h1>Pastelería 1000 Sabores</h1>
-            <p>Celebra la dulzura de la vida con Pastelería 1000 Sabores</p>
-            <p>Estamos emocionados de compartir nuestras delicias contigo. Descubre, saborea y crea momentos inolvidables con nosotros.</p>
-            <a href="productos.html">Ver Productos <img src="./public/img/placeholder.png" alt="right-arrow"></a>
+        <section id="hero">
+            <h2>Bienvenidos a la celebración de nuestros 50 años</h2>
+            <p>Tradición, sabor y la mejor repostería de Chile a tu mesa.</p>
+            <a href="./pages/productos.html">Ver Catálogo</a>
         </section>
-        <section class="categorias">
-            <h2>Nuestras Categorías</h2>
+
+        <section id="promociones">
+            <h2>Beneficios Especiales</h2>
+            <ul>
+                <li>50% de descuento para mayores de 50 años.</li>
+                <li>10% de por vida usando el código: <strong>FELICES50</strong>.</li>
+                <li>Torta gratis para estudiantes de Duoc UC en su cumpleaños.</li>
+            </ul>
+        </section>
+
+        <section id="destacados">
+            <h2>Nuestros Favoritos</h2>
             <div>
-                <ul>
-                    <li><a href="productos.html?categoria=tortas-cuadradas"><img src="./public/img/placeholder.png" alt="t-cuadrada"> 
-                        <span>Tortas Cuadradas</span></a></li>
-                    <li><a href="productos.html?categoria=tortas-circulares"><img src="./public/img/placeholder.png" alt="t-circular"> 
-                        <span>Tortas Circulares</span></a></li>
-                    <li><a href="productos.html?categoria=postres-individuales"><img src="./public/img/placeholder.png" alt="cupcake"> 
-                        <span>Postres Individuales</span></a></li>
-                    <li><a href="productos.html?categoria=sin-azucar"><img src="./public/img/placeholder.png" alt="planta"> 
-                        <span>Productos Sin Azúcar</span></a></li>
-                    <li><a href="productos.html?categoria=pasteleria-tradicional"><img src="./public/img/placeholder.png" alt="medialuna"> 
-                        <span>Pastelería Tradicional</span></a></li>
-                    <li><a href="productos.html?categoria=sin-gluten"><img src="./public/img/placeholder.png" alt="sin-trigo"> 
-                        <span>Productos Sin Gluten</span></a></li>
-                    <li><a href="productos.html?categoria=veganos"><img src="./public/img/placeholder.png" alt="planta2"> 
-                        <span>Productos Veganos</span></a></li>
-                    <li><a href="productos.html?categoria=tortas-especiales"><img src="./public/img/placeholder.png" alt="estrella"> 
-                        <span>Tortas Especiales</span></a></li>
-                </ul>
+                <article>
+                    <h3>Torta Cuadrada de Chocolate</h3>
+                    <p>$45.000 CLP</p>
+                    <a href="./pages/detalle-producto.html">Ver detalle</a>
+                </article>
+                <article>
+                    <h3>Torta Circular de Manjar</h3>
+                    <p>$42.000 CLP</p>
+                    <a href="./pages/detalle-producto.html">Ver detalle</a>
+                </article>
             </div>
-        </section>
-        <section>
-            <h2>Productos Destacados</h2>
-            <div>
-                <!-- ESTRUCTURA <div>
-                    <img src="./public/img/placeholder.png" alt="torta especifica">
-                </div>
-                <span>
-                    <h3></h3>
-                    <p></p>
-                    <a href="#"></a>
-                </span> -->
-            </div>
-        </section>
-        <section>
-            <h2>Nuestra Historia</h2>
-            <p>Detallamos la historia y origen de las recetas tradicionales que han pasado de generación en generación.</p>
-            <a href="nosotros.html">Conoce más <img src="./public/img/placeholder.png" alt="right-arrow"></a>
-        </section>
-        <section>
-            <h2>Impacto Comunitario</h2>
-            <p>Resaltamos cómo tus compras apoyan a los estudiantes de gastronomía y a la comunidad local.</p>
         </section>
     </main>
+
     <footer>
-        <section>
-            <img src="./public/img/placeholder.png" alt="pastelerialogo">
-            <p>Celebra la dulzura de la vida con nuestras creaciones artesanales. Recetas tradicionales con el toque más dulce y acogedor.</p>
-        </section>
-        <section>
-            <h4>Enlaces Rápidos</h4>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </section>
-        <section>
-            <h4>Categorías</h4>
-            <ul>
-                <li><a href="productos.html?categoria=tortas-cuadradas">Tortas Cuadradas</a></li>
-                <li><a href="productos.html?categoria=tortas-circulares">Tortas Circulares</a></li>
-                <li><a href="productos.html?categoria=postres-individuales">Postres Individuales</a></li>
-                <li><a href="productos.html?categoria=sin-azucar">Sin Azúcar</a></li>
-                <li><a href="productos.html?categoria=pasteleria-tradicional">Pastelería Tradicional</a></li>
-                <li><a href="productos.html?categoria=sin-gluten">Sin Gluten</a></li>
-                <li><a href="productos.html?categoria=veganos">Veganos</a></li>
-                <li><a href="productos.html?categoria=tortas-especiales">Tortas Especiales</a></li>
-            </ul>
-        </section>
-        <section>
-            <div>
-                <h4>Contáctanos</h4>
-                <ul>
-                    <li>📞 +56 9 1234 5678</li>
-                    <li>📧 contacto@1000sabores.cl</li>
-                    <li>📍 Santiago, Chile</li>
-                </ul>
-            </div>
-             <div>
-                 <h4>Síguenos</h4>
-                 <ul class="">
-                     <li><a href="#"><img src="./public/img/placeholder.png" alt="Instagram"></a></li>
-                     <li><a href="#"><img src="./public/img/placeholder.png" alt="Facebook"></a></li>
-                     <li><a href="#"><img src="./public/img/placeholder.png" alt="TikTok"></a></li>
-                     <li><a href="#"><img src="./public/img/placeholder.png" alt="YouTube"></a></li>
-                 </ul>
-             </div>   
-        </section>
-        <hr>
-        <section>
-            <p>&copy; 2026 Pastelería 1000 Sabores. Todos los derechos reservados.</p>
-            <p>🍪 Hecho con amor y mucho azúcar 🍪</p>
-        </section>
+        <p>&copy; 2026 Pastelería Mil Sabores. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
