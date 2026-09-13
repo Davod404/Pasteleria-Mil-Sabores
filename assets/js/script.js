@@ -134,6 +134,29 @@ const inputBuscar = document.getElementById("buscar");
 const selectCategoria = document.getElementById("categoria");
 const selectForma = document.getElementById("forma");
 
+function agregarAlCarrito(codigo) {
+    const producto = productos.find(prod => prod.codigo === codigo);
+
+    if (!producto) return;
+
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    const productoExistente = carrito.find(item => item.codigo === codigo);
+
+    if (productoExistente) {
+        productoExistente.cantidad += 1;
+    } else {
+        carrito.push({
+            codigo: producto.codigo,
+            nombre: producto.nombre,
+            precio: producto.precio,
+            cantidad: 1
+        });
+    }
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
 function mostrarProductos(lista) {
     if (!contenedor) return;
     contenedor.innerHTML = "";
